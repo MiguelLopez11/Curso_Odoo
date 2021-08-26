@@ -1,20 +1,17 @@
 import Apellidos
 
 
-class Nombre:
-    def __init__(self):
-        print("")
-    def Nombre(self):
-        print("¿Como te llamas?")
-        self.Nom = input()
 
-    def GetApellidos(self):
-        self.Apell = Apellidos.Apellidos()
+def Nombre():
+    print("¿Como te llamas?")
+    Nom = input()
+    return Nom
 
-        print(f"¡Bienvenido {self.Nom, self.Apell}!")
+def GetApellidos():
+    Nom = Nombre()
+    Apell = Apellidos.Apellidos()
 
-
+    print(f"¡Bienvenido {Nom, Apell}!")
 
 
-Nombre.Nombre()
-Nombre.GetApellidos()
+GetApellidos()
